@@ -17,6 +17,9 @@ class ResultViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        if rpsGame.playerMove != nil && rpsGame.computerMove != nil {
+            outcomeLabel.text = "\(String(describing: rpsGame.playerMove!)) vs \(String(describing: rpsGame.computerMove!))"
+        }
         gameResultsLabel.text = rpsGame.gameResult()
     }
 

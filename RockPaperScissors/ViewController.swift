@@ -14,14 +14,10 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
     
     @IBAction func rockButton(_ sender: UIButton) {
         rpsGame.playerMove = .rock
+        randomMoveGenerator()
         performSegue(withIdentifier: "resultSegue", sender: self)
     }
     
@@ -35,5 +31,19 @@ class ViewController: UIViewController {
         performSegue(withIdentifier: "resultSegue", sender: self)
     }
     
+    func randomMoveGenerator() {
+        let randomNum = Int(arc4random_uniform(3) + 1)
+        print(randomNum)
+        switch randomNum {
+        case 1:
+            rpsGame.computerMove = .rock
+        case 2:
+            rpsGame.computerMove = .paper
+        case 3:
+            rpsGame.computerMove = .scissors
+        default:
+            print("This did not work!")
+        }
+    }
 }
 

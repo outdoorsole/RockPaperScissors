@@ -10,21 +10,13 @@ import Foundation
 
 class RPSGame {
     var playerMove: RPSMove?
+    var computerMove: RPSMove?
     
     func gameResult() -> String {
-        var result: String
-        switch playerMove {
-        case .rock?:
-            print("You chose rock")
-            result = "You chose rock"
-        case .paper?:
-            print("You chose rock")
-            result = "You chose paper"
-        case .scissors?:
-            print("You chose scissors")
-            result = "You chose scissors"
-        default:
-            return ""
+        var result: String = ""
+        
+        if playerMove == .rock && computerMove == .rock || playerMove == .paper && computerMove == .paper || playerMove == .scissors && computerMove == .scissors {
+            result = "It's a tie!"
         }
         return result
     }
