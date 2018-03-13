@@ -19,7 +19,18 @@ class ViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
-
+    
+    @IBAction func rockButton(_ sender: UIButton) {
+        
+    }
+    
+    @IBAction func paperButton(_ sender: Any) {
+        
+    }
+    
+    @IBAction func scissorsButton(_ sender: UIButton) {
+        
+    }
+    
 }
 
