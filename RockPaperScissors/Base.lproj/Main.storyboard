@@ -24,14 +24,7 @@
                                 <state key="normal" title="Rock"/>
                                 <connections>
                                     <action selector="rockButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="sfu-9h-Rwe"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W0c-KC-p6q">
-                                <rect key="frame" x="167" y="278" width="40" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Paper"/>
-                                <connections>
-                                    <action selector="paperButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="pJb-DI-nnl"/>
+                                    <segue destination="5g9-3j-w3h" kind="show" identifier="rockSegue" id="12z-LG-swt"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UFf-6U-ANH">
@@ -40,6 +33,16 @@
                                 <state key="normal" title="Scissors"/>
                                 <connections>
                                     <action selector="scissorsButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="BlR-Us-ePC"/>
+                                    <segue destination="5g9-3j-w3h" kind="show" identifier="scissorsSegue" id="axO-HR-w8b"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W0c-KC-p6q">
+                                <rect key="frame" x="167" y="278" width="40" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Paper"/>
+                                <connections>
+                                    <action selector="paperButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="pJb-DI-nnl"/>
+                                    <segue destination="5g9-3j-w3h" kind="show" identifier="paperSegue" id="9tt-8P-ctW"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -49,6 +52,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-111" y="131"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="4qL-e4-76P">
@@ -82,4 +86,7 @@
             <point key="canvasLocation" x="869.60000000000002" y="130.88455772113943"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="9tt-8P-ctW"/>
+    </inferredMetricsTieBreakers>
 </document>

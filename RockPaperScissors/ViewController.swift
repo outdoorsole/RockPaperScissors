@@ -21,15 +21,15 @@ class ViewController: UIViewController {
     }
     
     @IBAction func rockButton(_ sender: UIButton) {
-        
+        performSegue(withIdentifier: "rockSegue", sender: self)
     }
     
     @IBAction func paperButton(_ sender: Any) {
-        
+        performSegue(withIdentifier: "paperSegue", sender: self)
     }
     
     @IBAction func scissorsButton(_ sender: UIButton) {
-        
+        performSegue(withIdentifier: "scissorsSegue", sender: self)
     }
     
 }
