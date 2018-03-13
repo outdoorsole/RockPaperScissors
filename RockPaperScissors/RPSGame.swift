@@ -12,7 +12,21 @@ class RPSGame {
     var playerMove: RPSMove?
     
     func gameResult() -> String {
-        return ""
+        var result: String
+        switch playerMove {
+        case .rock?:
+            print("You chose rock")
+            result = "You chose rock"
+        case .paper?:
+            print("You chose rock")
+            result = "You chose paper"
+        case .scissors?:
+            print("You chose scissors")
+            result = "You chose scissors"
+        default:
+            return ""
+        }
+        return result
     }
 }
 

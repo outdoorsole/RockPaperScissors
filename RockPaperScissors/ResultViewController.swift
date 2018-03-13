@@ -10,10 +10,14 @@ import UIKit
 
 class ResultViewController: UIViewController {
 
+    @IBOutlet weak var outcomeLabel: UILabel!
+    @IBOutlet weak var gameResultsLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        gameResultsLabel.text = rpsGame.gameResult()
     }
 
     @IBAction func backButton(_ sender: UIButton) {

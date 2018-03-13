@@ -18,13 +18,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eof-co-8Co">
-                                <rect key="frame" x="170" y="165" width="35" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W0c-KC-p6q">
+                                <rect key="frame" x="167" y="278" width="40" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Rock"/>
+                                <state key="normal" title="Paper"/>
                                 <connections>
-                                    <action selector="rockButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="sfu-9h-Rwe"/>
-                                    <segue destination="5g9-3j-w3h" kind="show" identifier="rockSegue" id="12z-LG-swt"/>
+                                    <action selector="paperButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="pJb-DI-nnl"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UFf-6U-ANH">
@@ -33,22 +32,23 @@
                                 <state key="normal" title="Scissors"/>
                                 <connections>
                                     <action selector="scissorsButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="BlR-Us-ePC"/>
-                                    <segue destination="5g9-3j-w3h" kind="show" identifier="scissorsSegue" id="axO-HR-w8b"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W0c-KC-p6q">
-                                <rect key="frame" x="167" y="278" width="40" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eof-co-8Co">
+                                <rect key="frame" x="170" y="165" width="35" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Paper"/>
+                                <state key="normal" title="Rock"/>
                                 <connections>
-                                    <action selector="paperButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="pJb-DI-nnl"/>
-                                    <segue destination="5g9-3j-w3h" kind="show" identifier="paperSegue" id="9tt-8P-ctW"/>
+                                    <action selector="rockButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="sfu-9h-Rwe"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <segue destination="5g9-3j-w3h" kind="show" identifier="resultSegue" id="te2-bT-KcK"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -62,16 +62,17 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Result" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zdn-0w-7nZ">
-                                <rect key="frame" x="108" y="143" width="159" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Result" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zdn-0w-7nZ">
+                                <rect key="frame" x="163.5" y="120" width="48" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Win or Lose" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hcc-Ld-6AC">
-                                <rect key="frame" x="139" y="281" width="91" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Win or Lose" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hcc-Ld-6AC">
+                                <rect key="frame" x="37.5" y="241" width="300" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="TKp-g2-bsk"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -86,15 +87,22 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Zdn-0w-7nZ" firstAttribute="top" secondItem="8Uv-WZ-Hrj" secondAttribute="top" constant="100" id="Dtj-cJ-uvl"/>
+                            <constraint firstItem="Hcc-Ld-6AC" firstAttribute="top" secondItem="Zdn-0w-7nZ" secondAttribute="bottom" constant="100" id="anp-pU-1Qy"/>
+                            <constraint firstItem="Zdn-0w-7nZ" firstAttribute="centerX" secondItem="tbR-3j-HY9" secondAttribute="centerX" id="bAK-XP-0ef"/>
+                            <constraint firstItem="Hcc-Ld-6AC" firstAttribute="centerX" secondItem="tbR-3j-HY9" secondAttribute="centerX" id="cJF-1V-D4h"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="8Uv-WZ-Hrj"/>
                     </view>
+                    <connections>
+                        <outlet property="gameResultsLabel" destination="Hcc-Ld-6AC" id="mt1-su-nlm"/>
+                        <outlet property="outcomeLabel" destination="Zdn-0w-7nZ" id="c2F-up-GFE"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oih-l8-BaW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="869.60000000000002" y="130.88455772113943"/>
         </scene>
     </scenes>
-    <inferredMetricsTieBreakers>
-        <segue reference="9tt-8P-ctW"/>
-    </inferredMetricsTieBreakers>
 </document>

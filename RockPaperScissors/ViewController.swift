@@ -21,15 +21,18 @@ class ViewController: UIViewController {
     }
     
     @IBAction func rockButton(_ sender: UIButton) {
-        performSegue(withIdentifier: "rockSegue", sender: self)
+        rpsGame.playerMove = .rock
+        performSegue(withIdentifier: "resultSegue", sender: self)
     }
     
     @IBAction func paperButton(_ sender: Any) {
-        performSegue(withIdentifier: "paperSegue", sender: self)
+        rpsGame.playerMove = .paper
+        performSegue(withIdentifier: "resultSegue", sender: self)
     }
     
     @IBAction func scissorsButton(_ sender: UIButton) {
-        performSegue(withIdentifier: "scissorsSegue", sender: self)
+        rpsGame.playerMove = .scissors
+        performSegue(withIdentifier: "resultSegue", sender: self)
     }
     
 }
