@@ -23,11 +23,13 @@ class ViewController: UIViewController {
     
     @IBAction func paperButton(_ sender: Any) {
         rpsGame.playerMove = .paper
+        randomMoveGenerator()
         performSegue(withIdentifier: "resultSegue", sender: self)
     }
     
     @IBAction func scissorsButton(_ sender: UIButton) {
         rpsGame.playerMove = .scissors
+        randomMoveGenerator()
         performSegue(withIdentifier: "resultSegue", sender: self)
     }
     
