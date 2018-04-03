@@ -15,9 +15,9 @@ class RPSGame {
     func gameResult() -> String {
         var result: String = ""
         
-        if playerMove == .rock && computerMove == .rock || playerMove == .paper && computerMove == .paper || playerMove == .scissors && computerMove == .scissors {
+        if playerMove == .Rock && computerMove == .Rock || playerMove == .Paper && computerMove == .Paper || playerMove == .Scissors && computerMove == .Scissors {
             result = "It's a tie!"
-        } else if playerMove == .rock && computerMove == .scissors || playerMove == .scissors && computerMove == .paper || playerMove == .paper && computerMove == .rock {
+        } else if playerMove == .Rock && computerMove == .Scissors || playerMove == .Scissors && computerMove == .Paper || playerMove == .Paper && computerMove == .Rock {
             result = "You win!"
         } else {
             result = "You lose!"
@@ -27,7 +27,7 @@ class RPSGame {
 }
 
 enum RPSMove {
-    case rock, paper, scissors
+    case Rock, Paper, Scissors
 }
 
 var rpsGame = RPSGame()

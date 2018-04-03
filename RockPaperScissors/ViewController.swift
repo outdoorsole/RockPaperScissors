@@ -18,19 +18,19 @@ class ViewController: UIViewController {
     }
     
     @IBAction func rockButton(_ sender: UIButton) {
-        rpsGame.playerMove = .rock
+        rpsGame.playerMove = .Rock
         randomMoveGenerator()
         setLabel()
     }
     
     @IBAction func paperButton(_ sender: Any) {
-        rpsGame.playerMove = .paper
+        rpsGame.playerMove = .Paper
         randomMoveGenerator()
         setLabel()
     }
     
     @IBAction func scissorsButton(_ sender: UIButton) {
-        rpsGame.playerMove = .scissors
+        rpsGame.playerMove = .Scissors
         randomMoveGenerator()
         setLabel()
     }
@@ -40,11 +40,11 @@ class ViewController: UIViewController {
         print(randomNum)
         switch randomNum {
         case 1:
-            rpsGame.computerMove = .rock
+            rpsGame.computerMove = .Rock
         case 2:
-            rpsGame.computerMove = .paper
+            rpsGame.computerMove = .Paper
         case 3:
-            rpsGame.computerMove = .scissors
+            rpsGame.computerMove = .Scissors
         default:
             print("This did not work!")
         }
@@ -52,7 +52,7 @@ class ViewController: UIViewController {
     
     func setLabel() {
         if rpsGame.playerMove != nil && rpsGame.computerMove != nil {
-            gameResultsLabel.text = "\(String(describing: rpsGame.playerMove!)) vs \(String(describing: rpsGame.computerMove!))"
+            gameResultsLabel.text = "\(String(describing: rpsGame.playerMove!)) vs \(String(describing: rpsGame.computerMove!)). " + rpsGame.gameResult()
         }
     }
 }
