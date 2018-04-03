@@ -13,7 +13,6 @@
 		167CE93620576993004460A5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 167CE93520576993004460A5 /* Assets.xcassets */; };
 		167CE93920576993004460A5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 167CE93720576993004460A5 /* LaunchScreen.storyboard */; };
 		167CE94320576BB2004460A5 /* RPSGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 167CE94220576BB2004460A5 /* RPSGame.swift */; };
-		167CE94520576DD8004460A5 /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 167CE94420576DD8004460A5 /* ResultViewController.swift */; };
 		16FF22F820734BC900285BEA /* HistoryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16FF22F720734BC900285BEA /* HistoryTableViewController.swift */; };
 		16FF22FE20734F3400285BEA /* RPSResults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16FF22FD20734F3400285BEA /* RPSResults.swift */; };
 /* End PBXBuildFile section */
@@ -27,7 +26,6 @@
 		167CE93820576993004460A5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		167CE93A20576993004460A5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		167CE94220576BB2004460A5 /* RPSGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RPSGame.swift; sourceTree = "<group>"; };
-		167CE94420576DD8004460A5 /* ResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
 		16FF22F720734BC900285BEA /* HistoryTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryTableViewController.swift; sourceTree = "<group>"; };
 		16FF22FD20734F3400285BEA /* RPSResults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RPSResults.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -66,7 +64,6 @@
 				167CE93020576993004460A5 /* ViewController.swift */,
 				167CE93220576993004460A5 /* Main.storyboard */,
 				16FF22F720734BC900285BEA /* HistoryTableViewController.swift */,
-				167CE94420576DD8004460A5 /* ResultViewController.swift */,
 				167CE93520576993004460A5 /* Assets.xcassets */,
 				167CE93720576993004460A5 /* LaunchScreen.storyboard */,
 				167CE94220576BB2004460A5 /* RPSGame.swift */,
@@ -152,7 +149,6 @@
 				167CE94320576BB2004460A5 /* RPSGame.swift in Sources */,
 				16FF22FE20734F3400285BEA /* RPSResults.swift in Sources */,
 				167CE92F20576993004460A5 /* AppDelegate.swift in Sources */,
-				167CE94520576DD8004460A5 /* ResultViewController.swift in Sources */,
 				16FF22F820734BC900285BEA /* HistoryTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
