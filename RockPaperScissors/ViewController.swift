@@ -20,16 +20,19 @@ class ViewController: UIViewController {
     @IBAction func rockButton(_ sender: UIButton) {
         rpsGame.playerMove = .rock
         randomMoveGenerator()
+        setLabel()
     }
     
     @IBAction func paperButton(_ sender: Any) {
         rpsGame.playerMove = .paper
         randomMoveGenerator()
+        setLabel()
     }
     
     @IBAction func scissorsButton(_ sender: UIButton) {
         rpsGame.playerMove = .scissors
         randomMoveGenerator()
+        setLabel()
     }
     
     func randomMoveGenerator() {
