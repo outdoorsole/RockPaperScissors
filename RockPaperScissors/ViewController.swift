@@ -10,6 +10,8 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var gameResultsLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -18,19 +20,16 @@ class ViewController: UIViewController {
     @IBAction func rockButton(_ sender: UIButton) {
         rpsGame.playerMove = .rock
         randomMoveGenerator()
-        performSegue(withIdentifier: "resultSegue", sender: self)
     }
     
     @IBAction func paperButton(_ sender: Any) {
         rpsGame.playerMove = .paper
         randomMoveGenerator()
-        performSegue(withIdentifier: "resultSegue", sender: self)
     }
     
     @IBAction func scissorsButton(_ sender: UIButton) {
         rpsGame.playerMove = .scissors
         randomMoveGenerator()
-        performSegue(withIdentifier: "resultSegue", sender: self)
     }
     
     func randomMoveGenerator() {
@@ -45,6 +44,12 @@ class ViewController: UIViewController {
             rpsGame.computerMove = .scissors
         default:
             print("This did not work!")
+        }
+    }
+    
+    func setLabel() {
+        if rpsGame.playerMove != nil && rpsGame.computerMove != nil {
+            gameResultsLabel.text = "\(String(describing: rpsGame.playerMove!)) vs \(String(describing: rpsGame.computerMove!))"
         }
     }
 }

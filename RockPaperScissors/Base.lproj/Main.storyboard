@@ -42,68 +42,25 @@
                                     <action selector="rockButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="sfu-9h-Rwe"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jdg-Ys-hNM">
+                                <rect key="frame" x="16" y="464" width="343" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Play" id="DcT-0n-zhR"/>
                     <connections>
-                        <segue destination="5g9-3j-w3h" kind="show" identifier="resultSegue" id="te2-bT-KcK"/>
+                        <outlet property="gameResultsLabel" destination="Jdg-Ys-hNM" id="dMI-Er-BnI"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="402" y="130"/>
-        </scene>
-        <!--Result View Controller-->
-        <scene sceneID="4qL-e4-76P">
-            <objects>
-                <viewController id="5g9-3j-w3h" customClass="ResultViewController" customModule="RockPaperScissors" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="tbR-3j-HY9">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Result" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zdn-0w-7nZ">
-                                <rect key="frame" x="163.5" y="120" width="48" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Win or Lose" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hcc-Ld-6AC">
-                                <rect key="frame" x="37.5" y="241" width="300" height="21"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="300" id="TKp-g2-bsk"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3IZ-0f-y8j">
-                                <rect key="frame" x="167" y="389" width="34" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Back"/>
-                                <connections>
-                                    <action selector="backButton:" destination="5g9-3j-w3h" eventType="touchUpInside" id="sjo-Jc-ohc"/>
-                                </connections>
-                            </button>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <constraints>
-                            <constraint firstItem="Zdn-0w-7nZ" firstAttribute="top" secondItem="8Uv-WZ-Hrj" secondAttribute="top" constant="100" id="Dtj-cJ-uvl"/>
-                            <constraint firstItem="Hcc-Ld-6AC" firstAttribute="top" secondItem="Zdn-0w-7nZ" secondAttribute="bottom" constant="100" id="anp-pU-1Qy"/>
-                            <constraint firstItem="Zdn-0w-7nZ" firstAttribute="centerX" secondItem="tbR-3j-HY9" secondAttribute="centerX" id="bAK-XP-0ef"/>
-                            <constraint firstItem="Hcc-Ld-6AC" firstAttribute="centerX" secondItem="tbR-3j-HY9" secondAttribute="centerX" id="cJF-1V-D4h"/>
-                        </constraints>
-                        <viewLayoutGuide key="safeArea" id="8Uv-WZ-Hrj"/>
-                    </view>
-                    <connections>
-                        <outlet property="gameResultsLabel" destination="Hcc-Ld-6AC" id="mt1-su-nlm"/>
-                        <outlet property="outcomeLabel" destination="Zdn-0w-7nZ" id="c2F-up-GFE"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="oih-l8-BaW" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1208.8" y="130.88455772113943"/>
+            <point key="canvasLocation" x="400.80000000000001" y="129.98500749625188"/>
         </scene>
         <!--History-->
         <scene sceneID="Pco-9k-TKc">
