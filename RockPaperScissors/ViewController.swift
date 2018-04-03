@@ -52,7 +52,11 @@ class ViewController: UIViewController {
     
     func setLabel() {
         if rpsGame.playerMove != nil && rpsGame.computerMove != nil {
-            gameResultsLabel.text = "\(String(describing: rpsGame.playerMove!)) vs \(String(describing: rpsGame.computerMove!)). " + rpsGame.gameResult()
+            var gameResults = "\(String(describing: rpsGame.playerMove!)) vs \(String(describing: rpsGame.computerMove!)). " + rpsGame.gameResult()
+            gameResultsLabel.text = gameResults
+            
+            // Append to game history
+            rpsResults.matches.append(gameResults)
         }
     }
 }

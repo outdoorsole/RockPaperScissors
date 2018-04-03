@@ -32,14 +32,14 @@ class HistoryTableViewController: UITableViewController {
         return rpsResults.matches.count
     }
 
-    /*
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
-
-        // Configure the cell...
+        let cell = tableView.dequeueReusableCell(withIdentifier: "GameResultsCell", for: indexPath)
+        
+        if cell.textLabel != nil {
+            cell.textLabel!.text = rpsResults.matches[indexPath.row]
+        }
 
         return cell
     }
-    */
 
 }
