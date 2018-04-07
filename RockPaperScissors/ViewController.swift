@@ -17,22 +17,27 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
     }
     
-    @IBAction func rockButton(_ sender: UIButton) {
-        rpsGame.playerMove = .Rock
-        randomMoveGenerator()
-        setLabel()
-    }
-    
-    @IBAction func paperButton(_ sender: Any) {
-        rpsGame.playerMove = .Paper
-        randomMoveGenerator()
-        setLabel()
-    }
-    
-    @IBAction func scissorsButton(_ sender: UIButton) {
-        rpsGame.playerMove = .Scissors
-        randomMoveGenerator()
-        setLabel()
+    @IBAction func moveButtonPressed(_ sender: UIButton) {
+        if let senderTitle = sender.titleLabel {
+            if let titleText = senderTitle.text {
+                
+                print("sender title \(titleText)")
+                
+                switch titleText {
+                case "Rock":
+                    rpsGame.playerMove = .Rock
+                case "Paper":
+                    rpsGame.playerMove = .Paper
+                case "Scissors":
+                    rpsGame.playerMove = .Scissors
+                default:
+                    print("No move selected for player. Choose again.")
+                }
+                
+                randomMoveGenerator()
+                setLabel()
+            }
+        }
     }
     
     func randomMoveGenerator() {

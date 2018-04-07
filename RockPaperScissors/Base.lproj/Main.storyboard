@@ -25,21 +25,21 @@
                                         <rect key="frame" x="0.0" y="0.0" width="335" height="30"/>
                                         <state key="normal" title="Rock"/>
                                         <connections>
-                                            <action selector="rockButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="sfu-9h-Rwe"/>
+                                            <action selector="moveButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="oFN-lF-rwg"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W0c-KC-p6q">
                                         <rect key="frame" x="0.0" y="40" width="335" height="30"/>
                                         <state key="normal" title="Paper"/>
                                         <connections>
-                                            <action selector="paperButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="pJb-DI-nnl"/>
+                                            <action selector="moveButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5qb-kz-vCi"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UFf-6U-ANH">
                                         <rect key="frame" x="0.0" y="80" width="335" height="30"/>
                                         <state key="normal" title="Scissors"/>
                                         <connections>
-                                            <action selector="scissorsButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="BlR-Us-ePC"/>
+                                            <action selector="moveButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="BWA-Xf-eIF"/>
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jdg-Ys-hNM">
