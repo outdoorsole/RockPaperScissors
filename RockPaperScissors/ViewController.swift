@@ -21,15 +21,15 @@ class ViewController: UIViewController {
         if let senderTitle = sender.titleLabel {
             if let titleText = senderTitle.text {
                 
-                setPlayerMove(title: titleText)
-                randomMoveGenerator()
-                setLabel()
+                setPlayerMove(move: titleText)
+                setComputerMove(randomNum: randomNumGenerator())
+                setGameResultsLabel()
             }
         }
     }
     
-    func setPlayerMove(title: String) {
-        switch title {
+    func setPlayerMove(move: String) {
+        switch move {
         case "Rock":
             rpsGame.playerMove = .Rock
         case "Paper":
@@ -40,9 +40,8 @@ class ViewController: UIViewController {
             print("No move selected for player. Choose again.")
         }
     }
-    
-    func randomMoveGenerator() {
-        let randomNum = Int(arc4random_uniform(3) + 1)
+        
+    func setComputerMove(randomNum: Int) {
         switch randomNum {
         case 1:
             rpsGame.computerMove = .Rock
@@ -55,7 +54,11 @@ class ViewController: UIViewController {
         }
     }
     
-    func setLabel() {
+    func randomNumGenerator() -> Int {
+        return Int(arc4random_uniform(3) + 1)
+    }
+    
+    func setGameResultsLabel() {
         if rpsGame.playerMove != nil && rpsGame.computerMove != nil {
             let gameResults = "\(String(describing: rpsGame.playerMove!)) vs \(String(describing: rpsGame.computerMove!)). " + rpsGame.gameResult()
             gameResultsLabel.text = gameResults
