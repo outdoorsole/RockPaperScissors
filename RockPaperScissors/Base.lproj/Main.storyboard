@@ -53,6 +53,15 @@
                                     </label>
                                 </subviews>
                             </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eb8-jg-WWU">
+                                <rect key="frame" x="187" y="578" width="0.0" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="Bm6-B9-yJK"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -60,12 +69,15 @@
                             <constraint firstItem="TJr-gK-hKg" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="EMb-8f-vbA"/>
                             <constraint firstItem="TJr-gK-hKg" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="f3y-H5-E0m"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="TJr-gK-hKg" secondAttribute="trailing" constant="20" id="ll6-Wc-rsD"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="eb8-jg-WWU" secondAttribute="bottom" constant="10" id="npC-eX-d2K"/>
+                            <constraint firstItem="eb8-jg-WWU" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="oJB-bQ-Pln"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Play" image="Play" selectedImage="Play" id="DcT-0n-zhR"/>
                     <connections>
                         <outlet property="gameResultsLabel" destination="Jdg-Ys-hNM" id="dMI-Er-BnI"/>
+                        <outlet property="gameScoreLabel" destination="eb8-jg-WWU" id="xCh-og-Eay"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

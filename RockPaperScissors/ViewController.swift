@@ -11,10 +11,12 @@ import UIKit
 class ViewController: UIViewController {
 
     @IBOutlet weak var gameResultsLabel: UILabel!
+    @IBOutlet weak var gameScoreLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        gameScoreLabel.text = "Win: \(rpsGame.win)  Loss: \(rpsGame.loss)  Tie: \(rpsGame.tie)"
     }
     
     @IBAction func moveButtonPressed(_ sender: UIButton) {
@@ -24,6 +26,8 @@ class ViewController: UIViewController {
                 setPlayerMove(move: titleText)
                 setComputerMove(randomNum: randomNumGenerator())
                 setGameResultsLabel()
+                
+
             }
         }
     }

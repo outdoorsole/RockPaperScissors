@@ -11,6 +11,9 @@ import Foundation
 class RPSGame {
     var playerMove: RPSMove?
     var computerMove: RPSMove?
+    var win: Int = 0
+    var loss: Int = 0
+    var tie: Int = 0
     
     func gameResult() -> String {
         var result: String = ""
