@@ -20,10 +20,13 @@ class RPSGame {
         
         if playerMove == .Rock && computerMove == .Rock || playerMove == .Paper && computerMove == .Paper || playerMove == .Scissors && computerMove == .Scissors {
             result = "It's a tie!"
+            tie += 1
         } else if playerMove == .Rock && computerMove == .Scissors || playerMove == .Scissors && computerMove == .Paper || playerMove == .Paper && computerMove == .Rock {
             result = "You win!"
+            win += 1
         } else {
             result = "You lose!"
+            loss += 1
         }
         return result
     }

@@ -16,7 +16,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        gameScoreLabel.text = "Win: \(rpsGame.win)  Loss: \(rpsGame.loss)  Tie: \(rpsGame.tie)"
+        setGameScoreLabel()
     }
     
     @IBAction func moveButtonPressed(_ sender: UIButton) {
@@ -26,8 +26,7 @@ class ViewController: UIViewController {
                 setPlayerMove(move: titleText)
                 setComputerMove(randomNum: randomNumGenerator())
                 setGameResultsLabel()
-                
-
+                setGameScoreLabel()
             }
         }
     }
@@ -71,5 +70,8 @@ class ViewController: UIViewController {
             rpsResults.matches.append(gameResults)
         }
     }
+    
+    func setGameScoreLabel() {
+        gameScoreLabel.text = "Win: \(rpsGame.win)  Loss: \(rpsGame.loss)  Tie: \(rpsGame.tie)"
+    }
 }
-
