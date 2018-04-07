@@ -21,28 +21,28 @@ class ViewController: UIViewController {
         if let senderTitle = sender.titleLabel {
             if let titleText = senderTitle.text {
                 
-                print("sender title \(titleText)")
-                
-                switch titleText {
-                case "Rock":
-                    rpsGame.playerMove = .Rock
-                case "Paper":
-                    rpsGame.playerMove = .Paper
-                case "Scissors":
-                    rpsGame.playerMove = .Scissors
-                default:
-                    print("No move selected for player. Choose again.")
-                }
-                
+                setPlayerMove(title: titleText)
                 randomMoveGenerator()
                 setLabel()
             }
         }
     }
     
+    func setPlayerMove(title: String) {
+        switch title {
+        case "Rock":
+            rpsGame.playerMove = .Rock
+        case "Paper":
+            rpsGame.playerMove = .Paper
+        case "Scissors":
+            rpsGame.playerMove = .Scissors
+        default:
+            print("No move selected for player. Choose again.")
+        }
+    }
+    
     func randomMoveGenerator() {
         let randomNum = Int(arc4random_uniform(3) + 1)
-        print(randomNum)
         switch randomNum {
         case 1:
             rpsGame.computerMove = .Rock
